@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>متجر كراون للعطور</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Cairo', sans-serif; font-family: 'Arial', sans-serif; direction: rtl; background: #fffaf2; color: #333; padding: 20px; margin: 0; }
+    body { font-family: 'Cairo', sans-serif; direction: rtl; background: #fffaf2; color: #333; padding: 20px; margin: 0; }
     h1 { text-align: center; margin-bottom: 20px; }
     .bestseller, .product-list { margin-bottom: 30px; }
     .section-title { text-align: center; font-size: 24px; margin: 40px 0 20px; color: #b48c1d; }
@@ -22,6 +22,7 @@
     }
     .filters button:hover { background: #555; }
     .product { transition: transform 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ccc; padding: 20px; margin-bottom: 30px; border-radius: 12px; background: #fff; text-align: center; }
+    .product:hover { transform: translateY(-5px); }
     .product img { width: 100%; max-width: 300px; border-radius: 8px; }
     .notes { margin-top: 10px; text-align: right; }
     .notes li { margin: 5px 0; }
@@ -49,18 +50,16 @@
 
   <h1>متجر كراون للعطور</h1>
 
-  <!-- قسم الأكثر مبيعًا -->
   <div class="bestseller">
     <h2 class="section-title">الأكثر مبيعًا</h2>
     <div class="product">
       <h3>L’Interdit - Givenchy</h3>
       <img src="linterdit.jpg" alt="L’Interdit Givenchy">
       <p>عطر نسائي أنيق من جيفنشي، يتميز بالغموض والجرأة.</p>
-      <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب الآن</a>
+      <a href="https://wa.me/967772771881" class="btn" target="_blank">اطلب الآن</a>
     </div>
   </div>
 
-  <!-- الفلاتر -->
   <div class="filters">
     <button onclick="filterProducts('all')">الكل</button>
     <button onclick="filterProducts('رجالي')">رجالي</button>
@@ -68,7 +67,6 @@
     <button onclick="filterProducts('للجنسين')">للجنسين</button>
   </div>
 
-  <!-- قائمة المنتجات -->
   <div class="product-list">
     <div class="product نسائي">
       <h3>L’Interdit - Givenchy</h3>
@@ -80,7 +78,7 @@
         <li><strong>الحجم:</strong> 80 مل</li>
       </ul>
       <p><strong>السعر:</strong> 80 دولار</p>
-      <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب عبر واتساب</a>
+      <a href="https://wa.me/967772771881" class="btn" target="_blank">اطلب عبر واتساب</a>
     </div>
 
     <div class="product رجالي">
@@ -92,13 +90,13 @@
         <li><strong>المكونات:</strong> البرغموت، التوابل، العنبر، اللبان، الجلد</li>
       </ul>
       <p><strong>السعر:</strong> 100 دولار</p>
-      <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب عبر واتساب</a>
+      <a href="https://wa.me/967772771881" class="btn" target="_blank">اطلب عبر واتساب</a>
     </div>
   </div>
 
   <footer>
     &copy; 2025 متجر كراون. جميع الحقوق محفوظة.  
-    | <a href="https://wa.me/967778678789" target="_blank">واتساب</a>
+    | <a href="https://wa.me/967772771881" target="_blank">واتساب</a>
     | <a href="#">إنستغرام</a>
     | <a href="#">فيسبوك</a>
   </footer>
