@@ -6,18 +6,45 @@
   <title>متجر كراون للعطور</title>
   <style>
     body { font-family: 'Arial', sans-serif; direction: rtl; background: #fffaf2; color: #333; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    .filters { text-align: center; margin-bottom: 30px; }
+    .filters button {
+      margin: 5px;
+      padding: 10px 15px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .filters button:hover { background: #555; }
     .product { border: 1px solid #ccc; padding: 20px; margin-bottom: 30px; border-radius: 12px; background: #fff; }
     .product img { width: 100%; max-width: 400px; border-radius: 8px; }
     .notes { margin-top: 10px; }
     .notes li { margin: 5px 0; }
     .btn { display: inline-block; padding: 10px 20px; background: #2ecc71; color: #fff; text-decoration: none; border-radius: 6px; }
-    h1 { text-align: center; margin-bottom: 40px; }
   </style>
+  <script>
+    function filterProducts(category) {
+      const all = document.querySelectorAll('.product');
+      all.forEach(item => {
+        item.style.display = (category === 'all' || item.classList.contains(category)) ? 'block' : 'none';
+      });
+    }
+  </script>
 </head>
 <body>
+
   <h1>متجر كراون للعطور</h1>
 
-  <div class="product">
+  <div class="filters">
+    <button onclick="filterProducts('all')">الكل</button>
+    <button onclick="filterProducts('رجالي')">رجالي</button>
+    <button onclick="filterProducts('نسائي')">نسائي</button>
+    <button onclick="filterProducts('للجنسين')">للجنسين</button>
+  </div>
+
+  <div class="product نسائي">
     <h2>L’Interdit - Givenchy</h2>
     <img src="linterdit.jpg" alt="L’Interdit Givenchy">
     <p>عطر ل انتروديت انتنس (L'INTERDIT) إصدار 2020 من جيفنشي، عطر <strong>نسائي</strong> فاخر مناسب للاستعمال المسائي.</p>
@@ -31,7 +58,7 @@
     <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب عبر واتساب</a>
   </div>
 
-  <div class="product">
+  <div class="product رجالي">
     <h2>Amouage Interlude Man</h2>
     <img src="amouage-interlude.jpg" alt="Amouage Interlude">
     <p>تستر أمواج انترلود الرجالي او دو بارفيوم 100 مل – عطر <strong>رجالي</strong> فاخر من العائلة الشرقية الخشبية.</p>
