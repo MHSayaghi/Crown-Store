@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>متجر كراون للعطور</title>
   <style>
-    body { font-family: 'Arial', sans-serif; direction: rtl; background: #fffaf2; color: #333; padding: 20px; }
+    body { font-family: 'Arial', sans-serif; direction: rtl; background: #fffaf2; color: #333; padding: 20px; margin: 0; }
     h1 { text-align: center; margin-bottom: 20px; }
+    .bestseller, .product-list { margin-bottom: 30px; }
+    .section-title { text-align: center; font-size: 24px; margin: 40px 0 20px; color: #a67c00; }
     .filters { text-align: center; margin-bottom: 30px; }
     .filters button {
       margin: 5px;
@@ -18,11 +20,20 @@
       cursor: pointer;
     }
     .filters button:hover { background: #555; }
-    .product { border: 1px solid #ccc; padding: 20px; margin-bottom: 30px; border-radius: 12px; background: #fff; }
-    .product img { width: 100%; max-width: 400px; border-radius: 8px; }
-    .notes { margin-top: 10px; }
+    .product { border: 1px solid #ccc; padding: 20px; margin-bottom: 30px; border-radius: 12px; background: #fff; text-align: center; }
+    .product img { width: 100%; max-width: 300px; border-radius: 8px; }
+    .notes { margin-top: 10px; text-align: right; }
     .notes li { margin: 5px 0; }
-    .btn { display: inline-block; padding: 10px 20px; background: #2ecc71; color: #fff; text-decoration: none; border-radius: 6px; }
+    .btn { display: inline-block; padding: 10px 20px; background: #2ecc71; color: #fff; text-decoration: none; border-radius: 6px; margin-top: 10px; }
+    footer {
+      background-color: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      border-top: 3px solid gold;
+    }
+    footer a { color: gold; text-decoration: none; margin: 0 10px; }
   </style>
   <script>
     function filterProducts(category) {
@@ -37,6 +48,18 @@
 
   <h1>متجر كراون للعطور</h1>
 
+  <!-- قسم الأكثر مبيعًا -->
+  <div class="bestseller">
+    <h2 class="section-title">الأكثر مبيعًا</h2>
+    <div class="product">
+      <h3>L’Interdit - Givenchy</h3>
+      <img src="linterdit.jpg" alt="L’Interdit Givenchy">
+      <p>عطر نسائي أنيق من جيفنشي، يتميز بالغموض والجرأة.</p>
+      <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب الآن</a>
+    </div>
+  </div>
+
+  <!-- الفلاتر -->
   <div class="filters">
     <button onclick="filterProducts('all')">الكل</button>
     <button onclick="filterProducts('رجالي')">رجالي</button>
@@ -44,35 +67,40 @@
     <button onclick="filterProducts('للجنسين')">للجنسين</button>
   </div>
 
-  <div class="product نسائي">
-    <h2>L’Interdit - Givenchy</h2>
-    <img src="linterdit.jpg" alt="L’Interdit Givenchy">
-    <p>عطر ل انتروديت انتنس (L'INTERDIT) إصدار 2020 من جيفنشي، عطر <strong>نسائي</strong> فاخر مناسب للاستعمال المسائي.</p>
-    <ul class="notes">
-      <li><strong>الفصل:</strong> الشتاء والخريف</li>
-      <li><strong>الوقت:</strong> مساءً</li>
-      <li><strong>الحجم:</strong> 80 مل</li>
-      <li><strong>الوصف:</strong> باقة عطرية فاخرة تعبّر عن الغموض والجرأة.</li>
-    </ul>
-    <p><strong>السعر:</strong> 80 دولار</p>
-    <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب عبر واتساب</a>
+  <!-- قائمة المنتجات -->
+  <div class="product-list">
+    <div class="product نسائي">
+      <h3>L’Interdit - Givenchy</h3>
+      <img src="linterdit.jpg" alt="L’Interdit Givenchy">
+      <p>عطر نسائي فاخر مناسب للاستعمال المسائي.</p>
+      <ul class="notes">
+        <li><strong>الفصل:</strong> الشتاء والخريف</li>
+        <li><strong>الوقت:</strong> مساءً</li>
+        <li><strong>الحجم:</strong> 80 مل</li>
+      </ul>
+      <p><strong>السعر:</strong> 80 دولار</p>
+      <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب عبر واتساب</a>
+    </div>
+
+    <div class="product رجالي">
+      <h3>Amouage Interlude Man</h3>
+      <img src="amouage-interlude.jpg" alt="Amouage Interlude">
+      <p>عطر رجالي شرقي خشبي، منعش وفاخر.</p>
+      <ul class="notes">
+        <li><strong>الإصدار:</strong> 2012</li>
+        <li><strong>المكونات:</strong> البرغموت، التوابل، العنبر، اللبان، الجلد</li>
+      </ul>
+      <p><strong>السعر:</strong> 100 دولار</p>
+      <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب عبر واتساب</a>
+    </div>
   </div>
 
-  <div class="product رجالي">
-    <h2>Amouage Interlude Man</h2>
-    <img src="amouage-interlude.jpg" alt="Amouage Interlude">
-    <p>تستر أمواج انترلود الرجالي او دو بارفيوم 100 مل – عطر <strong>رجالي</strong> فاخر من العائلة الشرقية الخشبية.</p>
-    <ul class="notes">
-      <li><strong>الخط العطري:</strong> اورينتال وودي</li>
-      <li><strong>سنة الإصدار:</strong> 2012</li>
-      <li><strong>الطبقة العليا:</strong> البرغموت، التوابل، الفلفل الحلو</li>
-      <li><strong>القلب:</strong> العنبر، اللبان، القريضة</li>
-      <li><strong>القاعدة:</strong> الجلد، العود، البتشول، خشب الصندل</li>
-      <li><strong>الوصف:</strong> عطر منعش ودافئ ذو رائحة فخمة وجذابة، مناسب لكافة المناسبات.</li>
-    </ul>
-    <p><strong>السعر:</strong> 100 دولار</p>
-    <a href="https://wa.me/967778678789" class="btn" target="_blank">اطلب عبر واتساب</a>
-  </div>
+  <footer>
+    &copy; 2025 متجر كراون. جميع الحقوق محفوظة.  
+    | <a href="https://wa.me/967778678789" target="_blank">واتساب</a>
+    | <a href="#">إنستغرام</a>
+    | <a href="#">فيسبوك</a>
+  </footer>
 
 </body>
 </html>
