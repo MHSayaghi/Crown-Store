@@ -2,77 +2,31 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>متجر كراون للعطور</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Cairo', sans-serif; margin: 0; background: #fffaf2; color: #333; font-size: 18px; }
-    header { background: #b48c1d; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: relative; }
-    header h1 { margin: 0; font-size: 22px; }
+    body { font-family: 'Cairo', sans-serif; direction: rtl; background: #fffaf2; color: #333; font-size: 18px; margin: 0; padding: 20px; }
+    header { background: #b48c1d; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
     .menu-btn { font-size: 26px; cursor: pointer; }
-    #sidebar { height: 100%; width: 0; position: fixed; z-index: 1; top: 0; right: 0; background: #333; overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
-    #sidebar a { padding: 8px 32px; text-decoration: none; font-size: 20px; color: white; display: block; transition: 0.3s; }
-    #sidebar a:hover { background-color: #575757; }
-    #sidebar .closebtn { position: absolute; top: 20px; left: 25px; font-size: 36px; }
-    .search-container { padding: 15px 20px; background: #fff; text-align: center; }
-    .search-container input[type="text"] { width: 80%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 18px; }
-    .section-title { text-align: center; margin: 30px 0; font-size: 26px; color: #b48c1d; }
-    .product-list { display: flex; flex-wrap: wrap; justify-content: center; }
-    .product { border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 15px; background: #fff; width: 250px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .product:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
-    .product img { width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .product h3 { font-size: 20px; margin-bottom: 10px; }
-    .btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: linear-gradient(to right, #c59d5f, #b47b00); color: white; border-radius: 8px; text-decoration: none; font-size: 18px; }
+    .product { border: 1px solid #ccc; border-radius: 10px; padding: 15px; margin: 10px 0; background: white; }
+    img { width: 100%; max-width: 250px; border-radius: 12px; }
   </style>
-  <script>
-    function openSidebar() { document.getElementById("sidebar").style.width = "250px"; }
-    function closeSidebar() { document.getElementById("sidebar").style.width = "0"; }
-    function searchProducts() {
-      let input = document.getElementById('searchInput').value.toLowerCase();
-      let products = document.getElementsByClassName('product');
-      for (let i = 0; i < products.length; i++) {
-        let title = products[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-        products[i].style.display = title.includes(input) ? "block" : "none";
-      }
-    }
-  </script>
 </head>
 <body>
+  <header>
+    <h1>متجر كراون</h1>
+    <span class="menu-btn">&#9776;</span>
+  </header>
 
-<header>
-  <h1>متجر كراون</h1>
-  <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
-</header>
-
-<div id="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-  <a href="index.html">الرئيسية</a>
-  <a href="about.html">من نحن</a>
-  <a href="contact.html">تواصل معنا</a>
-  <a href="privacy.html">سياسة الخصوصية</a>
-</div>
-
-<div class="search-container">
-  <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="ابحث عن عطر...">
-</div>
-
-<h2 class="section-title">الأكثر مبيعًا</h2>
-
-<div class="product-list">
   <div class="product">
-    <h3>L’Interdit - Givenchy</h3>
-    <img src="linterdit.jpg" alt="L’Interdit Givenchy">
-    <p>عطر نسائي أنيق يتميز بالغموض والجرأة.</p>
-    <a class="btn" href="https://wa.me/967772771881?text=مرحباً%20،%20أرغب%20في%20شراء%20عطر%20L'Interdit%20من%20متجركم%20وأريد%20تفاصيل%20أكثر.%0A%0Aرابط%20الصورة:%20https://crown-store-two.vercel.app/linterdit.jpg" target="_blank">اطلب عبر واتساب</a>
+    <h2>L’Interdit - Givenchy</h2>
+    <img src="linterdit.jpg" alt="L’Interdit">
+    <p>عطر نسائي فاخر يتميز بالغموض والجرأة، مثالي للمناسبات الخاصة.</p>
   </div>
 
   <div class="product">
-    <h3>Amouage Interlude Man</h3>
+    <h2>Amouage Interlude Man</h2>
     <img src="amouage-interlude.jpg" alt="Amouage Interlude">
-    <p>عطر رجالي شرقي فاخر.</p>
-    <a class="btn" href="https://wa.me/967772771881?text=مرحباً%20،%20أرغب%20في%20شراء%20عطر%20Amouage%20Interlude%20Man%20من%20متجركم%20وأريد%20تفاصيل%20أكثر.%0A%0Aرابط%20الصورة:%20https://crown-store-two.vercel.app/amouage-interlude.jpg" target="_blank">اطلب عبر واتساب</a>
+    <p>عطر رجالي شرقي فاخر، يمنحك حضوراً قوياً وأناقة نادرة.</p>
   </div>
-</div>
-
 </body>
 </html>
